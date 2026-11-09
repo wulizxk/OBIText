@@ -19,7 +19,7 @@ The data package is distributed separately by request under its own terms of use
 
 ## Data access
 
-Contact the corresponding author, Xingkun Zhang, at **wulizxk@stu.aynu.edu.cn** to
+Contact the author at **wulizxk@stu.aynu.edu.cn** to
 request the OBIText data package and confirm its terms of use. The package
 contains the full resource, the prepared task data, and the frozen
 evaluation questions and answers.
@@ -163,13 +163,3 @@ scores are averaged across three separate runs (seeds 42, 3407, 2026), not an
 ensemble. Deterministic baselines have one run. All-position frequency strata
 contain 1,051, 2,305 and 46,551 items respectively; zero-frequency targets have
 no items in this frozen split.
-
-## Source integrity and checkpoint compatibility
-
-Run `python scripts/verify_sources.py` to check the current release source
-fingerprints. The provenance records also retain the verified training source
-and configuration hashes used by the original completed runs. The evaluation
-loader recognizes these exact identities, applies the current evaluation
-selection and retains the original checkpoint metadata. Runtime, dataset and
-completion checks still apply. Resuming training requires the matching original
-run identity and source version.
