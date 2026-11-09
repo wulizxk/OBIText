@@ -1,0 +1,11 @@
+{
+  "version": "v1.5.0",
+  "parent_version": "v1.4.1",
+  "code_sha256": "1fe80c24f6d371a35f2a47c2156f90529323c794863855e619d383f7cbef1549",
+  "config_sha256": "9ee0573fe9bd85bd61ae17e5dc4f683086776da2d8b91368faa1847838c4506e",
+  "data_sha256": "ec2e8fe2a9f46a7bb642f0736146f8aeefcdb62a509b27eef7cade7102087500",
+  "tokenizer_asset": "ED1",
+  "tokenizer_size": 40489,
+  "gpu_smoke_completed": false,
+  "training_started": false
+}

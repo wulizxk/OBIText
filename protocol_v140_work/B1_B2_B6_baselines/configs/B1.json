@@ -1,0 +1,10 @@
+{
+  "experiment": "B1",
+  "name": "Train-only unigram",
+  "dataset_version": "v1.5.0",
+  "unigram_alpha": 0.1,
+  "beam_width": 10,
+  "single_return": 10,
+  "multi_return": 5,
+  "parameter_selection": "preregistered_not_dev_optimized"
+}

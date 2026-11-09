@@ -1,0 +1,2 @@
+# Already present in the oracle environment. No Torch, GPU, or new model weights.
+numpy==2.4.6

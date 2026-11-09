@@ -1,0 +1,72 @@
+{
+  "B1": [
+    "B1_B2_B6_baselines",
+    null,
+    null
+  ],
+  "B2": [
+    "B1_B2_B6_baselines",
+    null,
+    null
+  ],
+  "B6": [
+    "B1_B2_B6_baselines",
+    null,
+    null
+  ],
+  "B3": [
+    "B3_B4_neural_baselines",
+    "b34",
+    "B3"
+  ],
+  "B4": [
+    "B3_B4_neural_baselines",
+    "b34",
+    "B4"
+  ],
+  "E1": [
+    "E1_sikuroberta",
+    "e1",
+    "e1a"
+  ],
+  "E2": [
+    "E2_guwenbert_base",
+    "e2",
+    "e2a"
+  ],
+  "E3": [
+    "E3_sikubert",
+    "e3",
+    "e3a"
+  ],
+  "D1": [
+    "D1_gpt2_chinese_ancient",
+    "d1",
+    "d1a"
+  ],
+  "D2": [
+    "D2_qwen2_5_0_5b",
+    "d2",
+    "d2a"
+  ],
+  "D3": [
+    "D3_qwen3_0_6b_base",
+    "d3",
+    "d3a"
+  ],
+  "ED1": [
+    "E7_randeng_t5_77m",
+    "ed1",
+    "ed1a"
+  ],
+  "ED2": [
+    "E8_mengzi_t5_base",
+    "ed2",
+    "ed2a"
+  ],
+  "ED3": [
+    "E9_bart_base_chinese",
+    "ed3",
+    "ed3a"
+  ]
+}

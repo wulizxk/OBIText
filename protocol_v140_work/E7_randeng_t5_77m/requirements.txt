@@ -1,0 +1,8 @@
+# Dedicated oracle environment; torch==2.7.1+cu128 installed from official CUDA index.
+transformers==4.57.6
+tokenizers==0.22.2
+huggingface-hub==0.36.2
+safetensors==0.7.0
+pytest==9.1.1
+numpy==2.4.6
+sentencepiece==0.2.1

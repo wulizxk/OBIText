@@ -1,0 +1,9 @@
+# Install PyTorch separately for the appropriate CUDA platform; see the root README.
+# Recorded training runtime used Python 3.11.16 and torch 2.7.1+cu128.
+transformers==4.57.6
+tokenizers==0.22.2
+huggingface-hub==0.36.2
+safetensors==0.7.0
+sentencepiece==0.2.1
+numpy==2.4.6
+pytest>=8,<9

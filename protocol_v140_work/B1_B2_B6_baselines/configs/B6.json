@@ -1,0 +1,23 @@
+{
+  "experiment": "B6",
+  "name": "Train-only BM25 with gap alignment and unigram fallback",
+  "dataset_version": "v1.5.0",
+  "unigram_alpha": 0.1,
+  "beam_width": 10,
+  "ngram_max": 3,
+  "bm25_k1": 1.2,
+  "bm25_b": 0.75,
+  "max_df_ratio": 0.25,
+  "document_limit": 64,
+  "span_limit": 128,
+  "retrieval_candidate_limit": 20,
+  "alignment_limit": 8,
+  "alignment_weight": 2.0,
+  "boundary_weight": 3.0,
+  "require_local_alignment_or_boundary": true,
+  "fallback": "unigram_after_retrieved_candidates",
+  "exclude_query_group": true,
+  "single_return": 10,
+  "multi_return": 5,
+  "parameter_selection": "preregistered_not_dev_optimized"
+}

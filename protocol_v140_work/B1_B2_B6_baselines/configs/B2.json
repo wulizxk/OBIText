@@ -1,0 +1,15 @@
+{
+  "experiment": "B2",
+  "name": "Bidirectional interpolated variable-order 5-gram",
+  "dataset_version": "v1.5.0",
+  "unigram_alpha": 0.1,
+  "order": 5,
+  "smoothing": "witten_bell_interpolation",
+  "forward_weight": 0.5,
+  "beam_width": 10,
+  "proposal_directions": "forward_and_backward",
+  "maximum_proposal_union": 20,
+  "single_return": 10,
+  "multi_return": 5,
+  "parameter_selection": "preregistered_not_dev_optimized"
+}

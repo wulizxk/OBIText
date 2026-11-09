@@ -1,0 +1,13 @@
+{
+  "version": "v1.5.0",
+  "parent_version": "v1.4.1",
+  "code_sha256": "9aaaf8586dc14d98cc9209c02f3e6b86d97743f234507c990f7bf01f928bd769",
+  "config_sha256": {
+    "B1.json": "e9464adb22659eb44526436645ffcc9ae8f6307d5d47b7473a7d461e00940b1a",
+    "B2.json": "81c1a0c659ea9108c81a9ab34b5685f45a0dafb4727a79861816d1a63bfae2c7",
+    "B6.json": "f5d7936c65fba63c996d4422dbb23cd20da685c65065f3f9d1b133504a1c6ad5"
+  },
+  "data_sha256": "ec2e8fe2a9f46a7bb642f0736146f8aeefcdb62a509b27eef7cade7102087500",
+  "gpu_smoke_completed": false,
+  "training_started": false
+}

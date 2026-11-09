@@ -1,0 +1,86 @@
+{
+  "test_random": {
+    "folder": "random",
+    "row_suite": "random",
+    "lengths": {
+      "1": 1535,
+      "2": 1535,
+      "3": 1535,
+      "4": 1535,
+      "5": 1535
+    },
+    "hashes": {
+      "public.jsonl": "c78b283ea8eadcf3a13b98fb93822d2e50740e6afdc032640612d266149d9d24",
+      "gold.jsonl": "00c17dd2442e3be551c627bae7d6075c97bf5b9d1a3b53f1e9b9b99192ceebdc"
+    },
+    "context_sides": {
+      "internal": 4847,
+      "final": 1309,
+      "initial": 1519
+    }
+  },
+  "test_expert": {
+    "folder": "expert",
+    "row_suite": "expert",
+    "lengths": {
+      "1": 533,
+      "2": 533,
+      "3": 416,
+      "4": 88,
+      "5": 29
+    },
+    "hashes": {
+      "public.jsonl": "0a5aeb7d0689eb5c96eba5f60a6b3597ccb98aedde83c62401b1d4d0f976c88c",
+      "gold.jsonl": "bb6ddfade04d49be4326bce73946a9f8f8d9b4f0b4b68f174b8dc1709a85d661"
+    },
+    "context_sides": {
+      "internal": 1147,
+      "initial": 163,
+      "final": 289
+    }
+  },
+  "test_prefix": {
+    "folder": "prefix",
+    "row_suite": "prefix",
+    "lengths": {
+      "1": 4873
+    },
+    "hashes": {
+      "public.jsonl": "b448fb2f23604a8141250d7ac40fe9a54f9169c450bf8dca2bed872e2cc62383",
+      "gold.jsonl": "2079e8661708e9707cb03ef9100f9b3705627718c0ded8327dbfa7d308931f0e"
+    },
+    "context_sides": {
+      "initial": 4873
+    }
+  },
+  "test_suffix": {
+    "folder": "suffix",
+    "row_suite": "suffix",
+    "lengths": {
+      "1": 4412
+    },
+    "hashes": {
+      "public.jsonl": "dc03f859be514092208a10fa230c8879efbb980e571968b2cc670cb51921f3f4",
+      "gold.jsonl": "13252f3a4166d99918d1e49bbfd48f9122116769c9e62986e2477f88325a4236"
+    },
+    "context_sides": {
+      "final": 4412
+    }
+  },
+  "test_all_position": {
+    "folder": "all_position",
+    "row_suite": "all_position_single",
+    "lengths": {
+      "1": 49907
+    },
+    "hashes": {
+      "public.jsonl": "51b8555dc545be90e80bc02e8fac7c18525c2888518d2dff15c37f90e9ef2e0e",
+      "gold.jsonl": "f5ddb2940d21ccb2f2a328776782b0653992224a33110eac6ab5ae6646f6e208"
+    },
+    "context_sides": {
+      "internal": 40622,
+      "final": 4412,
+      "initial": 4873
+    }
+  }
+}
