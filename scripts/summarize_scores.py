@@ -70,6 +70,23 @@ def summarize(values, frequency=None):
     return result
 
 
+def read_run_identity(path, scored_sha):
+    metadata_path = path.parent / 'metrics.json'
+    if not metadata_path.is_file():
+        return None
+    metadata = read(metadata_path)
+    if 'scored_sha256' in metadata and metadata['scored_sha256'] != scored_sha:
+        raise ValueError('Prediction checksum differs from its metrics.json')
+    model = (metadata.get('model') or metadata.get('experiment')
+             or metadata.get('identity', {}).get('cfg', {}).get('experiment'))
+    if model is None or 'seed' not in metadata:
+        return None
+    seed = metadata['seed']
+    if not isinstance(model, str) or (seed is not None and type(seed) is not int):
+        raise ValueError('Invalid model or seed in metrics.json')
+    return dict(model=model.upper().removesuffix('-A'), seed=seed)
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--scored', nargs='+', type=Path, required=True,
@@ -79,15 +96,28 @@ def main():
     a = p.parse_args()
     if a.output.exists():
         p.error('Choose a new summary output file')
+    for index, path in enumerate(a.scored):
+        if any(path.samefile(previous) for previous in a.scored[:index]):
+            p.error('The same prediction file was supplied more than once')
     frequency = read(a.target_vocab)['training_eligible_position_frequency'] if a.target_vocab else None
     per_run, signature = [], None
+    identities = []
     for path in a.scored:
+        scored_sha = sha(path)
+        identity = read_run_identity(path, scored_sha)
+        if identity is not None:
+            if identities and identity['model'] != identities[0]['model']:
+                raise ValueError('Cannot average predictions from different models')
+            if identity in identities:
+                raise ValueError('The same model and seed were supplied more than once')
+            identities.append(identity)
         values = rows(path)
         current = [(r['example_id'], r['source_id'], r['group_id'], r['gap_length'], r['gold_units']) for r in values]
         if signature is not None and current != signature:
             raise ValueError('Cannot average runs with different ordered questions or references')
         signature = current
-        per_run.append(dict(scored_sha256=sha(path), summary=summarize(values, frequency)))
+        per_run.append(dict(scored_sha256=scored_sha, identity=identity,
+                            summary=summarize(values, frequency)))
     def average(nodes):
         if isinstance(nodes[0], dict):
             if any(set(x) != set(nodes[0]) for x in nodes):
@@ -100,7 +130,8 @@ def main():
                 raise ValueError('Question/type counts differ across seeds')
             return nodes[0]
         return dict(mean=mean(nodes), sample_sd=stdev(nodes) if len(nodes) > 1 else None)
-    report = dict(runs=len(per_run), metrics_are_fractions=True, per_run=per_run,
+    report = dict(runs=len(per_run), metrics_are_fractions=True,
+                  run_identities_verified=len(identities) == len(per_run), per_run=per_run,
                   across_runs=average([r['summary'] for r in per_run]))
     if a.target_vocab:
         report['target_vocab_sha256'] = sha(a.target_vocab)

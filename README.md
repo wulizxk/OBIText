@@ -49,6 +49,9 @@ The standalone evaluator accepts the same frozen files and the
 `evaluation/manifest.json` supplied with the data package.
 `provenance/public_data.json` records the expected per-length counts and
 question and answer hashes for the public data edition.
+Evaluation reports record the actual data-package manifest hash in
+`data_package_manifest_sha256`. The `data_manifest_sha256` field records the
+frozen training-data identity used for checkpoint compatibility.
 
 ## Getting started
 
@@ -137,6 +140,12 @@ active. For example, the following command runs the SikuRoBERTa tests.
 
 CUDA-specific tests require a compatible GPU.
 
+Run the standalone evaluation-tool regression tests from the repository root.
+
+```bash
+python -m pytest scripts/tests
+```
+
 ## Scoring and aggregation
 
 Random gaps contain 1,535 questions at each length from 1 through 5. Expert
@@ -148,6 +157,10 @@ The all-position evaluation supplies the 1–20, 21–99 and at least 100 traini
 frequency strata. Pass the frozen `target_vocab.json` with `--target-vocab` to
 `scripts/summarize_scores.py` to compute these strata. The script accepts one
 or several scored files for the same ordered questions and reference answers.
+It rejects repeated prediction files. When adjacent `metrics.json` files supply
+model and seed identities, it also checks that the model is shared and the
+seeds are distinct. Older prediction files can be summarized without this
+metadata, with `run_identities_verified` reported as `false`.
 
 ## Included models
 

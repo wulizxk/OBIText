@@ -42,6 +42,7 @@ def main():
     suite = identify_evaluation_suite(public_sha, gold_sha, a.data)
     public, gold, _ = checked_questions(a.data, a.questions, a.gold, a.manifest)
     report = dict(model=a.model, suite=suite, questions=len(public), data_manifest_sha256=FROZEN_MANIFEST,
+                  data_package_manifest_sha256=sha(a.data / 'DATA_SHA256SUMS.json'),
                   questions_sha256=public_sha, gold_sha256=gold_sha,
                   question_manifest_sha256=sha(a.manifest), evaluator_sha256=sha(__file__))
     started = time.monotonic()
