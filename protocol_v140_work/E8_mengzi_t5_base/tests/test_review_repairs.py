@@ -67,7 +67,8 @@ def build_artifact_fixture(root, cfg):
         folder=outputs/f'ed2a_v150_s{seed}_test'
         for suite in artifacts.SUITES: write_rows(folder/f'{suite}_predictions.jsonl',predictions[suite])
         report['test_artifact_schema_version']=artifacts.ARTIFACT_SCHEMA
-        with patch.object(protocol, 'EVALUATION_SUITES', suite_specs):
+        with patch.object(protocol, 'EVALUATION_SUITES', suite_specs), \
+             patch.object(protocol, 'DATA_MANIFEST_SHA256', sha(data/'DATA_SHA256SUMS.json')):
             report['prediction_artifacts']=artifacts.prediction_manifest(folder,data)
         reports[seed]=report
     batch={'schema_version':1,'seeds':[42,3407,2026],

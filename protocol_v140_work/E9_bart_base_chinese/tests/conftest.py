@@ -69,6 +69,7 @@ def artifact_bundle(artifact_template, tmp_path, monkeypatch):
         for length, count in group.items():
             mode = length if length in ('1', '2') else '3-5'
             modes[suite][mode] = modes[suite].get(mode, 0) + count
+    monkeypatch.setattr(protocol, 'DATA_MANIFEST_SHA256', artifact_template['manifest_sha'])
     monkeypatch.setattr(protocol, 'EVALUATION_SUITES', specs)
     monkeypatch.setattr(protocol, 'EXPECTED_LENGTH_COUNTS', lengths)
     monkeypatch.setattr(protocol, 'EXPECTED_MODE_COUNTS', modes)

@@ -57,7 +57,7 @@ def load_fit(path, gate):
         raise ValueError('Fit did not use the full Train set / target inventory')
     gate.path('splits/train.jsonl')
     for name, value in meta['data_files_read'].items():
-        if name not in gate.manifest['files'] or gate.manifest['files'][name] != value:
+        if value not in (gate.manifest['files'].get(name), gate.manifest.get('frozen_files', {}).get(name)) or value is None:
             raise ValueError('Fit data identity mismatch')
         if 'test' in name or 'dev_' in name or name.startswith('splits/') and name != 'splits/train.jsonl':
             raise ValueError('Non-Train content consumed by fit')

@@ -6,6 +6,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 FROZEN_MANIFEST = 'ec2e8fe2a9f46a7bb642f0736146f8aeefcdb62a509b27eef7cade7102087500'
+PUBLIC_DATA = json.loads((REPO / 'provenance/public_data.json').read_text(encoding='utf-8'))
 
 
 def read(path):
@@ -34,9 +35,11 @@ def write(path, value):
 
 def checked_data(data, names):
     data = Path(data).resolve()
-    if sha(data / 'DATA_SHA256SUMS.json') != FROZEN_MANIFEST:
-        raise ValueError('Expected the frozen OBIText v1.5.0 data manifest')
-    manifest = read(data / 'DATA_SHA256SUMS.json')
+    path = data / 'DATA_SHA256SUMS.json'
+    actual = sha(path)
+    if actual not in (FROZEN_MANIFEST, PUBLIC_DATA['data_manifest_sha256']):
+        raise ValueError('Unknown OBIText v1.5.0 data manifest')
+    manifest = read(path)
     for name in names:
         if sha(data / name) != manifest['files'].get(name):
             raise ValueError('Frozen data file mismatch: ' + name)
@@ -48,8 +51,11 @@ def checked_questions(data, public_path, gold_path=None, manifest_path=None):
     if manifest_path:
         manifest_path = Path(manifest_path).resolve()
         manifest = read(manifest_path)
-        if manifest['data_manifest_sha256'] != FROZEN_MANIFEST:
-            raise ValueError('Questions were built against a different data version')
+        actual = sha(Path(data) / 'DATA_SHA256SUMS.json')
+        if (manifest['data_manifest_sha256'] != actual
+                or (actual == PUBLIC_DATA['data_manifest_sha256']
+                    and sha(manifest_path) != PUBLIC_DATA['evaluation_manifest_sha256'])):
+            raise ValueError('Questions were built against a different data edition')
         for path in [public_path] + ([gold_path] if gold_path else []):
             path = Path(path).resolve()
             key = str(path.relative_to(manifest_path.parent))

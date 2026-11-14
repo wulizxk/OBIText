@@ -8,7 +8,8 @@ __pycache__/
 !.env.example
 protocol_v140_work/shared/data/
 protocol_v140_work/shared/pretrained/
-/OBIText_data/
+/OBIText_data/v1.5.0/tokenizers/*/*
+!/OBIText_data/v1.5.0/tokenizers/*/unit_mapping.json
 **/outputs/
 **/checkpoints/
 **/weights/

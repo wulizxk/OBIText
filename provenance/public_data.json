@@ -1,0 +1,90 @@
+{
+  "data_manifest_sha256": "c1ff9eebfdb10f5cf24b296f5671ba84359397030ae47ecdf4e19c066f24a8de",
+  "evaluation_manifest_sha256": "826b2474fc24c03fbc3257b4eccb0404991b5086a580bebe9361bf7f6c6d5fbd",
+  "suites": {
+    "test_random": {
+      "folder": "random",
+      "row_suite": "random",
+      "lengths": {
+        "1": 1535,
+        "2": 1535,
+        "3": 1535,
+        "4": 1535,
+        "5": 1535
+      },
+      "hashes": {
+        "public.jsonl": "47b251209157c40c6a8839347da18fec774c0448c6687e84813860ece80722f8",
+        "gold.jsonl": "00c17dd2442e3be551c627bae7d6075c97bf5b9d1a3b53f1e9b9b99192ceebdc"
+      },
+      "context_sides": {
+        "internal": 4847,
+        "final": 1309,
+        "initial": 1519
+      }
+    },
+    "test_expert": {
+      "folder": "expert",
+      "row_suite": "expert",
+      "lengths": {
+        "1": 533,
+        "2": 533,
+        "3": 416,
+        "4": 88,
+        "5": 29
+      },
+      "hashes": {
+        "public.jsonl": "e5f5c0c0654d5b2b96c3ee54ca72a094419bfccad5c540c1ed036a66a5d3932a",
+        "gold.jsonl": "bb6ddfade04d49be4326bce73946a9f8f8d9b4f0b4b68f174b8dc1709a85d661"
+      },
+      "context_sides": {
+        "internal": 1147,
+        "initial": 163,
+        "final": 289
+      }
+    },
+    "test_prefix": {
+      "folder": "prefix",
+      "row_suite": "prefix",
+      "lengths": {
+        "1": 4873
+      },
+      "hashes": {
+        "public.jsonl": "0cb749201daf3dd0d3a02fe09f2c0dc38b447a0acceadff0e3d07b6362f7f364",
+        "gold.jsonl": "2079e8661708e9707cb03ef9100f9b3705627718c0ded8327dbfa7d308931f0e"
+      },
+      "context_sides": {
+        "initial": 4873
+      }
+    },
+    "test_suffix": {
+      "folder": "suffix",
+      "row_suite": "suffix",
+      "lengths": {
+        "1": 4412
+      },
+      "hashes": {
+        "public.jsonl": "7a0903cd6ef3c6e101e65a0be0af8637202d2217a31aae6442c78ce97220428c",
+        "gold.jsonl": "13252f3a4166d99918d1e49bbfd48f9122116769c9e62986e2477f88325a4236"
+      },
+      "context_sides": {
+        "final": 4412
+      }
+    },
+    "test_all_position": {
+      "folder": "all_position",
+      "row_suite": "all_position_single",
+      "lengths": {
+        "1": 49907
+      },
+      "hashes": {
+        "public.jsonl": "2385be948c6c197b755d62fd0fbed498ba63e9e6f1d1c8f7ad097979254ede9a",
+        "gold.jsonl": "f5ddb2940d21ccb2f2a328776782b0653992224a33110eac6ab5ae6646f6e208"
+      },
+      "context_sides": {
+        "internal": 40622,
+        "final": 4412,
+        "initial": 4873
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "dataset_version": "v1.5.0",
+  "evaluation_protocol": "obitext-manuscript-v1",
+  "data_manifest_sha256": "c1ff9eebfdb10f5cf24b296f5671ba84359397030ae47ecdf4e19c066f24a8de",
+  "test_split_sha256": "bc41956da0b826f7d9f56c73aaa46dca1f644e9fa9511ace0fc8447d44704432",
+  "suites": {
+    "test_random": {
+      "folder": "random",
+      "questions": 7675,
+      "by_length": {
+        "1": 1535,
+        "2": 1535,
+        "3": 1535,
+        "4": 1535,
+        "5": 1535
+      }
+    },
+    "test_expert": {
+      "folder": "expert",
+      "questions": 1599,
+      "by_length": {
+        "1": 533,
+        "2": 533,
+        "3": 416,
+        "4": 88,
+        "5": 29
+      }
+    },
+    "test_prefix": {
+      "folder": "prefix",
+      "questions": 4873,
+      "by_length": {
+        "1": 4873
+      }
+    },
+    "test_suffix": {
+      "folder": "suffix",
+      "questions": 4412,
+      "by_length": {
+        "1": 4412
+      }
+    },
+    "test_all_position": {
+      "folder": "all_position",
+      "questions": 49907,
+      "by_length": {
+        "1": 49907
+      }
+    }
+  },
+  "files": {
+    "random/public.jsonl": "47b251209157c40c6a8839347da18fec774c0448c6687e84813860ece80722f8",
+    "random/gold.jsonl": "00c17dd2442e3be551c627bae7d6075c97bf5b9d1a3b53f1e9b9b99192ceebdc",
+    "expert/public.jsonl": "e5f5c0c0654d5b2b96c3ee54ca72a094419bfccad5c540c1ed036a66a5d3932a",
+    "expert/gold.jsonl": "bb6ddfade04d49be4326bce73946a9f8f8d9b4f0b4b68f174b8dc1709a85d661",
+    "prefix/public.jsonl": "0cb749201daf3dd0d3a02fe09f2c0dc38b447a0acceadff0e3d07b6362f7f364",
+    "prefix/gold.jsonl": "2079e8661708e9707cb03ef9100f9b3705627718c0ded8327dbfa7d308931f0e",
+    "suffix/public.jsonl": "7a0903cd6ef3c6e101e65a0be0af8637202d2217a31aae6442c78ce97220428c",
+    "suffix/gold.jsonl": "13252f3a4166d99918d1e49bbfd48f9122116769c9e62986e2477f88325a4236",
+    "all_position/public.jsonl": "2385be948c6c197b755d62fd0fbed498ba63e9e6f1d1c8f7ad097979254ede9a",
+    "all_position/gold.jsonl": "f5ddb2940d21ccb2f2a328776782b0653992224a33110eac6ab5ae6646f6e208"
+  }
+}

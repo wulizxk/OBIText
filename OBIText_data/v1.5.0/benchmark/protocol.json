@@ -1,0 +1,54 @@
+{
+  "version": "v1.5.0",
+  "parent_version": "v1.4.1",
+  "mask_policy": "targetable main-text units only; at least one visible main-text context unit remains; damage, ligatures and annotations protected as targets",
+  "full_sequence_masking": false,
+  "cross_suite_source_sharing": true,
+  "within_suite_duplicate_questions": false,
+  "checkpoint_selection_uses_test": false,
+  "prediction_target_count": 4116,
+  "input_unit_count": 4546,
+  "unit_of_length": "one atomic source unit, not a Unicode code point or native subword",
+  "validation_use": "checkpoint selection and hyperparameter tuning only",
+  "test_use": "final comparison after model and hyperparameter decisions",
+  "validation_suite": "dev_full",
+  "validation_public": "benchmark/dev_full_public.jsonl",
+  "validation_gold": "benchmark/dev_full_gold.jsonl",
+  "validation_rule": "exactly one fixed legal contiguous gap per validation source per available length",
+  "validation_aggregation": "equal-weight mean of scores for the five actual gap lengths",
+  "validation_question_count": 15024,
+  "validation_source_count": 4689,
+  "validation_length_counts": {
+    "1": 4689,
+    "2": 3911,
+    "3": 2871,
+    "4": 2017,
+    "5": 1536
+  },
+  "training_masks_dynamic": true,
+  "training_square_bracket_restorations_maskable": true,
+  "training_boundary_masks_enabled": true,
+  "training_boundary_span_policy": "length-1..5 spans may touch either sequence boundary; at least one source unit remains context",
+  "random_test_boundary_masks_enabled": true,
+  "source_task_sequences": 78875,
+  "expert_evidence_rule": "whole original bracket region; source normalized context equals representative context; no atomic cut",
+  "validation_suites": {
+    "dev_full": 15024
+  },
+  "test_suites": [
+    "test_random",
+    "test_expert",
+    "test_prefix",
+    "test_suffix",
+    "test_all_position"
+  ],
+  "frequency_bands": {
+    "source": "Eligible single-unit prediction positions in training",
+    "intervals": [
+      "1-20",
+      "21-99",
+      ">=100"
+    ],
+    "evaluation": "test_all_position"
+  }
+}

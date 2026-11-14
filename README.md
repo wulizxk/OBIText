@@ -5,8 +5,8 @@ Completion of Oracle Bone Inscriptions**.
 
 This package contains 14 baseline/model implementations, frozen training
 configurations, input adaptation, candidate generation, evaluation and
-score-summary utilities. It uses the prepared task data and frozen test questions
-supplied separately by the authors. Data preparation and test-set construction
+score-summary utilities. It uses the prepared OBIText v1.5.0 data and frozen test
+questions in the accompanying `OBIText_data/` directory. Data preparation and test-set construction
 are outside this code release.
 It accompanies the frozen task resource. Historical directory names
 containing `v140`, `v116` or `E7`–`E9` are retained because saved checkpoints bind
@@ -15,21 +15,21 @@ their source identities to those paths.
 ## License
 
 The OBIText code in this repository is released under the [MIT License](LICENSE).
-The data package is distributed separately by request under its own terms of use.
+The OBIText data are released under Creative Commons Attribution-NonCommercial
+4.0 International (CC BY-NC 4.0). See [the data license](OBIText_data/LICENSE)
+and [data documentation](OBIText_data/README.md) for scope and source attribution.
 
 ## Data access
 
-Contact the author at **wulizxk@stu.aynu.edu.cn** to
-request the OBIText data package and confirm its terms of use. The package
-contains the full resource, the prepared task data, and the frozen
-evaluation questions and answers.
+The accompanying public data edition contains the full resource, the prepared
+task data, and the frozen evaluation questions and answers.
 
-Extract `OBIText_data/` next to the code repository. From the repository root,
-set the data path in the shell you use to run the examples. If you store the
+The `OBIText_data/` directory is included inside the code repository. From the
+repository root, set the data path in the shell you use to run the examples. If you store the
 package elsewhere, set `OBITEXT_DATA` to the corresponding `v1.5.0/` directory.
 
 ```bash
-OBITEXT_DATA="../OBIText_data/v1.5.0"
+OBITEXT_DATA="OBIText_data/v1.5.0"
 ```
 
 Keep the directory layout and `DATA_SHA256SUMS.json` supplied with the package.
@@ -47,8 +47,8 @@ The project-level `test` command reads the paired `public.jsonl` and
 
 The standalone evaluator accepts the same frozen files and the
 `evaluation/manifest.json` supplied with the data package.
-`provenance/evaluation_suites.json` records the expected per-length counts and
-question and answer hashes.
+`provenance/public_data.json` records the expected per-length counts and
+question and answer hashes for the public data edition.
 
 ## Getting started
 
@@ -56,12 +56,22 @@ Use the recorded Python, PyTorch, CUDA and dependency versions in
 `provenance/recorded_runtime.json` when evaluating existing checkpoints. The
 original neural experiments used Python 3.11.16 and PyTorch 2.7.1+cu128.
 Install PyTorch for the matching CUDA platform before the other neural dependencies.
+The root `requirements.txt` is the installation entry point. Per-project
+requirements files are retained as part of the recorded source identities.
 
 ```bash
 python3.11 -m venv .venv
 source .venv/bin/activate
 python -m pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cu128
-python -m pip install -r requirements-neural.txt
+python -m pip install -r requirements.txt
+```
+
+Rebuild the expanded tokenizers from their pinned upstream assets before
+running model verification, training, or evaluation. The unit mappings and
+checksums supplied with the data determine the exact reconstruction.
+
+```bash
+python scripts/prepare_tokenizers.py --data "$OBITEXT_DATA"
 ```
 
 ```bash
@@ -109,13 +119,13 @@ checkpoint selection or training-completion arguments.
 
 ## Running the project tests
 
-Some tests read the frozen task data at
-`protocol_v140_work/shared/data/v1.5.0/`. To use the separate data package,
-create a symbolic link at that location from the repository root.
+Project CLIs and some tests use
+`protocol_v140_work/shared/data/v1.5.0/` as the default data location. Create a
+relative symbolic link to the included data from the repository root.
 
 ```bash
 mkdir -p protocol_v140_work/shared/data
-ln -s "$(cd "$OBITEXT_DATA" && pwd -P)" protocol_v140_work/shared/data/v1.5.0
+ln -s ../../../OBIText_data/v1.5.0 protocol_v140_work/shared/data/v1.5.0
 ```
 
 Run each test suite from its project directory with the Python environment

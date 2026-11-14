@@ -39,7 +39,7 @@ def main():
     sys.path[:0] = [str(project / 'src'), str(root / 'shared')]
     from benchmark_protocol_v140 import identify_evaluation_suite, validate_formal_suite_metric
     public_sha, gold_sha = sha(a.questions), sha(a.gold)
-    suite = identify_evaluation_suite(public_sha, gold_sha)
+    suite = identify_evaluation_suite(public_sha, gold_sha, a.data)
     public, gold, _ = checked_questions(a.data, a.questions, a.gold, a.manifest)
     report = dict(model=a.model, suite=suite, questions=len(public), data_manifest_sha256=FROZEN_MANIFEST,
                   questions_sha256=public_sha, gold_sha256=gold_sha,

@@ -4,7 +4,7 @@ from itertools import islice
 from pathlib import Path
 
 from .io import read, rows, sha
-from benchmark_protocol_v140 import EVALUATION_SUITES, benchmark_relative_path
+from benchmark_protocol_v140 import EVALUATION_SUITES, benchmark_relative_path, data_manifest, evaluation_hashes
 from .protocol import validate_data_protocol, FORMAL_TEST_SUITES, EXPECTED_LENGTH_COUNTS
 
 MANIFEST_SHA = 'ec2e8fe2a9f46a7bb642f0736146f8aeefcdb62a509b27eef7cade7102087500'
@@ -26,9 +26,7 @@ class DataGate:
         self.allow_test = allow_test
         self.allow_test_gold = False
         self.accessed = {}
-        if sha(self.root / 'DATA_SHA256SUMS.json') != MANIFEST_SHA:
-            raise ValueError('Expected the fixed v1.5.0 manifest, not another data revision')
-        self.manifest = read(self.root / 'DATA_SHA256SUMS.json')
+        self.manifest, self.manifest_sha = data_manifest(self.root)
         for name in ('benchmark/protocol.json', 'input_units.json', 'target_vocab.json', 'group_assignments.json'):
             self.path(name)
         self.protocol = validate_data_protocol(self.root)
@@ -52,7 +50,7 @@ class DataGate:
                 if not self.allow_test or (part == 'gold' and not self.allow_test_gold):
                     raise PermissionError(f'File not permitted in this stage: {name}')
                 path = self.root / name
-                expected = EVALUATION_SUITES[suite]['hashes'][part + '.jsonl']
+                expected = evaluation_hashes(self.root, suite)[part + '.jsonl']
                 if sha(path) != expected:
                     raise ValueError('Data hash mismatch: ' + name)
                 self.accessed[name] = expected

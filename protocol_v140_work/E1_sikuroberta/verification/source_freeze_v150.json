@@ -1,7 +1,7 @@
 {
   "version": "v1.5.0",
   "parent_version": "v1.4.1",
-  "code_sha256": "8e4618f7e8049c05499361a8ddd20ed57c0f5481c63c7f1fa0b62975d45fc53d",
+  "code_sha256": "086114d5666a506e4ca51bd9cf412e56bfdc61d271eb8e28886d1167251c3958",
   "config_sha256": "128ebb180eb7d331017050506abe233d510a2c22f7307c0d9d37444366f1ad7a",
   "data_sha256": "ec2e8fe2a9f46a7bb642f0736146f8aeefcdb62a509b27eef7cade7102087500",
   "tokenizer_asset": "E1",

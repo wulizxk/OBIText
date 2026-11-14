@@ -5,7 +5,11 @@
     "config": "B3",
     "training_source_sha256": "f489090f5cc4513f84f1bbdd821543e7e0e2c3fe13ac9f6e3b05f6be325b4c91",
     "training_config_digest": "111c803ca9b4634bd8cfcc907199f96dc606147e941eecfc9dffa8e71a6ffb43",
-    "current_source_sha256": "3f938179fe1caee4fd19e9419b3953f3d0c0af484749fd1429cbadfcd6788374"
+    "current_source_sha256": "9eb57dc5b3038ec5989503e3bf0ad32bbe1cefa92ec025aaa68651a7ae32c5d7",
+    "prior_release_source_sha256": "3f938179fe1caee4fd19e9419b3953f3d0c0af484749fd1429cbadfcd6788374",
+    "compatible_source_sha256": [
+      "ef3b3dbf8b7c8ba077c53585ce5464eb65b7eabdefa5f14a5e83647cf63c88ee"
+    ]
   },
   "B4": {
     "project": "B3_B4_neural_baselines",
@@ -13,7 +17,11 @@
     "config": "B4",
     "training_source_sha256": "f489090f5cc4513f84f1bbdd821543e7e0e2c3fe13ac9f6e3b05f6be325b4c91",
     "training_config_digest": "590eae98bffc532a3fa605a7d3440d7b0795d1dc76a802b9df65ca6c60bd44c3",
-    "current_source_sha256": "3f938179fe1caee4fd19e9419b3953f3d0c0af484749fd1429cbadfcd6788374"
+    "current_source_sha256": "9eb57dc5b3038ec5989503e3bf0ad32bbe1cefa92ec025aaa68651a7ae32c5d7",
+    "prior_release_source_sha256": "3f938179fe1caee4fd19e9419b3953f3d0c0af484749fd1429cbadfcd6788374",
+    "compatible_source_sha256": [
+      "ef3b3dbf8b7c8ba077c53585ce5464eb65b7eabdefa5f14a5e83647cf63c88ee"
+    ]
   },
   "E1": {
     "project": "E1_sikuroberta",
@@ -21,7 +29,11 @@
     "config": "e1a",
     "training_source_sha256": "cb0d9deead5e9f68eb2caa48ccbffeaab7fc4cdb195bcf60b4d3261617153d54",
     "training_config_digest": "525d705a3f235d02fadb1feb36ba54972e2183465e1dd76caa9e2208a57d5e6d",
-    "current_source_sha256": "8e4618f7e8049c05499361a8ddd20ed57c0f5481c63c7f1fa0b62975d45fc53d"
+    "current_source_sha256": "086114d5666a506e4ca51bd9cf412e56bfdc61d271eb8e28886d1167251c3958",
+    "prior_release_source_sha256": "8e4618f7e8049c05499361a8ddd20ed57c0f5481c63c7f1fa0b62975d45fc53d",
+    "compatible_source_sha256": [
+      "0f97fa7d3bef4c71015ff1869e406614dee841dcdb225277053d7f3fff5601a1"
+    ]
   },
   "E2": {
     "project": "E2_guwenbert_base",
@@ -29,7 +41,11 @@
     "config": "e2a",
     "training_source_sha256": "503f0d377f580aaea799cba20ea50c318aed1ea8d4f801677910f5fcbe706dc7",
     "training_config_digest": "18f64258f03c4770e5768e53af89e84fd812664580cc6f9b481ef3019cba0bde",
-    "current_source_sha256": "52dfe6c67b38f0ed4e7564f1ea68ff5e817d622485552ae84e5d92d01a90ced5"
+    "current_source_sha256": "c288f1789c9d804407010fa15dd5221aaf1145fc077e45ef4b98161cea834ea7",
+    "prior_release_source_sha256": "52dfe6c67b38f0ed4e7564f1ea68ff5e817d622485552ae84e5d92d01a90ced5",
+    "compatible_source_sha256": [
+      "94973f65220fd6a19626a0d24b7c6e2f8ae6683d92e8703761fe1b94c571b7ef"
+    ]
   },
   "E3": {
     "project": "E3_sikubert",
@@ -37,7 +53,11 @@
     "config": "e3a",
     "training_source_sha256": "f920823ed49549e8385fd1f927209350ee9ca349ba2cd888da10811c83afbe14",
     "training_config_digest": "6d7d974df1e2b30c3fd4013a26f9902e96239d637e56e92bf94425b6d63f3bbf",
-    "current_source_sha256": "7a5bbd0e2ce586575886aa25d519d33d50131a6e1e4a829e81f832db4b8a327d"
+    "current_source_sha256": "0a5230b47aa25f1b25885919934ba1f95b1a90961b5163cd842e5afd847edd6f",
+    "prior_release_source_sha256": "7a5bbd0e2ce586575886aa25d519d33d50131a6e1e4a829e81f832db4b8a327d",
+    "compatible_source_sha256": [
+      "ce28df6911dfd7e94e25e4acfdc004103c5583103eae9f1219c57654ba8a6e95"
+    ]
   },
   "D1": {
     "project": "D1_gpt2_chinese_ancient",
@@ -45,7 +65,11 @@
     "config": "d1a",
     "training_source_sha256": "03eafee3babc1f03f486087576bd4ebe70cd68fd2078060c165f8ad318d3ea6a",
     "training_config_digest": "16212c182d89c3c40b4a2667312cf640462f4a951c3cf3cd5438cbc4231b60bc",
-    "current_source_sha256": "f6a7629b18dad026926b062189dc4d6cc5f7dc6bbb006bb981895686091919d6"
+    "current_source_sha256": "f03a52d244e56f1a8418fe48ce773e82d97faedc2c0d6e1ff7c4823384498eae",
+    "prior_release_source_sha256": "f6a7629b18dad026926b062189dc4d6cc5f7dc6bbb006bb981895686091919d6",
+    "compatible_source_sha256": [
+      "c981d1eba3b7c5af6983e0801cbf4b839d0358b0be0d2634438d1d2c04fb77a5"
+    ]
   },
   "D2": {
     "project": "D2_qwen2_5_0_5b",
@@ -53,7 +77,11 @@
     "config": "d2a",
     "training_source_sha256": "9b65b5d84a13b86de963d02f087efbd22b261811745ef1bf359a68ae77a76732",
     "training_config_digest": "952273d217365c44723916946cd5fafd920500f5661bcdfa56cedb01b557b973",
-    "current_source_sha256": "9d46a22f950b30fd002f27da7121bdd274761fcdcb89585a7fe9c4969012ab47"
+    "current_source_sha256": "adfa373d77cefeedd8486f973926553cd81fecbb769f9ca347808ad5bb478c84",
+    "prior_release_source_sha256": "9d46a22f950b30fd002f27da7121bdd274761fcdcb89585a7fe9c4969012ab47",
+    "compatible_source_sha256": [
+      "66d7922554abb50c6794c07736e7dd50fc98d079ddbc93da1de1158a566850c6"
+    ]
   },
   "D3": {
     "project": "D3_qwen3_0_6b_base",
@@ -61,7 +89,11 @@
     "config": "d3a",
     "training_source_sha256": "d8442450384ef4841ff3cb869dc45520211e8e34fa5d39e4a986f79553320569",
     "training_config_digest": "f17c56c832a93129fe320062ae60d5265165251ff2a610e740fdc92c9cfe5585",
-    "current_source_sha256": "0a809562c8fec4309540bd186a0fc6c65a79bbf9166b433a087a4984d8e6b4dc"
+    "current_source_sha256": "a84f04624474696cd45f4de7f96353d4b43d050d73ccfe25c43ce514bb89b55c",
+    "prior_release_source_sha256": "0a809562c8fec4309540bd186a0fc6c65a79bbf9166b433a087a4984d8e6b4dc",
+    "compatible_source_sha256": [
+      "724d24efbea090dfefc9bfee2920a8174d718a00ede6a1440e833d4701c843b7"
+    ]
   },
   "ED1": {
     "project": "E7_randeng_t5_77m",
@@ -69,7 +101,11 @@
     "config": "ed1a",
     "training_source_sha256": "e5fe5411828b4ce51d0be9451a9885c2756501eb3e4e605e93ea73cc44b1eb06",
     "training_config_digest": "c2a95c56d26e62fdfdbf207c56f6357b1a3df6323f599366c9dd48f251b16168",
-    "current_source_sha256": "1fe80c24f6d371a35f2a47c2156f90529323c794863855e619d383f7cbef1549"
+    "current_source_sha256": "01f0b9eaab30c473e67323ac26591d88169ec0e174d4c3a28be4690903862213",
+    "prior_release_source_sha256": "1fe80c24f6d371a35f2a47c2156f90529323c794863855e619d383f7cbef1549",
+    "compatible_source_sha256": [
+      "483aa28ad6036da3dbbdab18ea7ec02f419ac1f8c9d9d16018a4954ca8618b2a"
+    ]
   },
   "ED2": {
     "project": "E8_mengzi_t5_base",
@@ -77,7 +113,11 @@
     "config": "ed2a",
     "training_source_sha256": "9f87379cde6aa54db70f8dc6498cfbd5ef1799eae3b865b4aa9151a5786ff098",
     "training_config_digest": "402e644e30b593cdf4e884eb63d521615920457e35d050b4ce9926220d2495f6",
-    "current_source_sha256": "4b733497bceaae8ef74b54331a60e241972d78a3fd2846ae66464c8d15f1f9d6"
+    "current_source_sha256": "97c55d8e8cf911eeb97d870537f11a5c3b5336efcddac6ce0d4b3d3e6b74f756",
+    "prior_release_source_sha256": "4b733497bceaae8ef74b54331a60e241972d78a3fd2846ae66464c8d15f1f9d6",
+    "compatible_source_sha256": [
+      "57d163be2a5443074ba80ee64cfc7ca372834db8d54520f3b4afa504b454834d"
+    ]
   },
   "ED3": {
     "project": "E9_bart_base_chinese",
@@ -85,6 +125,10 @@
     "config": "ed3a",
     "training_source_sha256": "2d5671b087a2debc235896b0949c0f956991d48aad82f53e2df6aa4263520229",
     "training_config_digest": "b4b3425243243194600595d8b2c026b3d7bd004f83935b2033d770a8e7b7f5fd",
-    "current_source_sha256": "80b72ab3b46eafdef22d8fe1bda3a762bd4a49f932db58185e8ac5b1b1132f98"
+    "current_source_sha256": "cb2c0653b234f461e38829f049e6f5582648576cf07d250bdc7a9d92d2633378",
+    "prior_release_source_sha256": "80b72ab3b46eafdef22d8fe1bda3a762bd4a49f932db58185e8ac5b1b1132f98",
+    "compatible_source_sha256": [
+      "646fdc74af135b38fb0d5c685680e3f10ddf200b60992d882c2b30d971d24920"
+    ]
   }
 }

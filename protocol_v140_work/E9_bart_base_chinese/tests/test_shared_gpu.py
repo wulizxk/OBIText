@@ -13,7 +13,8 @@ def policy(monkeypatch):
     monkeypatch.delenv('ED3_SHARED_GPU_POLICY', raising=False)
     monkeypatch.delenv('ED3_SHARED_GPU_POLICY_SHA256', raising=False)
     return {'schema': 1, 'gpu_uuid': 'GPU-test', 'boot_id': 'boot-test', 'uid': 1002,
-            'peer_project': '/home/zxk/oraccle-0905/E8_mengzi_t5_base', 'peer_code_sha256': 'b'*64,
+            'peer_project': str(Path(shared.__file__).resolve().parents[3] / 'E8_mengzi_t5_base'),
+            'peer_code_sha256': 'b'*64,
             'allocator_limit_mib': 4096, 'context_margin_mib': 1024, 'peer_reservation_mib': 29000,
             'free_margin_mib': 2048, 'minimum_ram_mib': 8192, 'minimum_disk_mib': 10240, 'max_peer_jobs': 2}
 

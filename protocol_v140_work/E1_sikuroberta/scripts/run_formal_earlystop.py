@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path[:0] = [str(ROOT / 'src'), str(ROOT.parent / 'shared')]
 from e1.io import read, sha, source_fingerprint, verify_data, write
 
-CODE_SHA = '8e4618f7e8049c05499361a8ddd20ed57c0f5481c63c7f1fa0b62975d45fc53d'
+CODE_SHA = '086114d5666a506e4ca51bd9cf412e56bfdc61d271eb8e28886d1167251c3958'
 CONFIG_SHA = '128ebb180eb7d331017050506abe233d510a2c22f7307c0d9d37444366f1ad7a'
 DATA_SHA = 'ec2e8fe2a9f46a7bb642f0736146f8aeefcdb62a509b27eef7cade7102087500'
 SEEDS = [(42, 0), (3407, 1), (2026, 2)]

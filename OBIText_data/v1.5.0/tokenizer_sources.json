@@ -1,0 +1,147 @@
+{
+  "D1": {
+    "repo": "uer/gpt2-chinese-ancient",
+    "revision": "3b264872995b09b5d9873e458f3d03a221c00669",
+    "upstream_license_label": null,
+    "upstream_files": {
+      "config.json": "84eec2caac9f7f2846a72ff42f4b1ab8092fe2f93c9b42595f26b5875bc076c3",
+      "special_tokens_map.json": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+      "tokenizer_config.json": "4518f609d7e6986bc2578abccd121191588ea3e77add72ff52ba284be34a0f1c",
+      "vocab.txt": "5e6aec77a6c440fa5a805e68d9ecf10e61280877eb112e19b58e14b6a3417853"
+    },
+    "rebuilt_files": {
+      "added_tokens.json": "07a5e00441f3cbc373be886d443019ecfa1ad9c3054a3295bacc575ad5015dc8",
+      "special_tokens_map.json": "a3e1eb1082467a5e35413bbc97a205ab8f01130cf83764b9f25e614d6eb0fb97",
+      "tokenizer.json": "aa97262f0e3b41ce64cf384616059edaf732c164b9ef0ffae10b5e2c6c7721e2",
+      "tokenizer_config.json": "71c34c23729a9ac3d84135a897109afa2a0a5deadb26fe850210bbd5ad37c4e8",
+      "vocab.txt": "5e6aec77a6c440fa5a805e68d9ecf10e61280877eb112e19b58e14b6a3417853"
+    }
+  },
+  "D2": {
+    "repo": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+    "upstream_license_label": "apache-2.0",
+    "upstream_files": {
+      "config.json": "479dcf0c5286339e41ad3992cd08ae88a467c4187587936248e2b7c96283484b",
+      "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "tokenizer_config.json": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    "rebuilt_files": {
+      "added_tokens.json": "475f38fb2757f58b4374d7e12b303746a14c113e16a4a082c38ac17e9b4159e5",
+      "chat_template.jinja": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5",
+      "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "special_tokens_map.json": "9d4e3adcf5b4894fc41be719499ebd5eef3ecbf34e8a2ef1ddd123d7f76ffeab",
+      "tokenizer.json": "d215eff186bea3ca439ee56d5972bde2c2ee6c9087d45adc1cdd591150ec5451",
+      "tokenizer_config.json": "a247265432165a32485b316c59f056b3ed5ebf1ee112dade7647c4f8d1b7c1c4",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  },
+  "D3": {
+    "repo": "Qwen/Qwen3-0.6B-Base",
+    "revision": "da87bfb608c14b7cf20ba1ce41287e8de496c0cd",
+    "upstream_license_label": "apache-2.0",
+    "upstream_files": {
+      "config.json": "504a6b58c4271583724e66584b6b7698aea18450209df6b2f7582df0e89cee59",
+      "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "tokenizer_config.json": "3c04ed3ca964ea2f6b2b5faf0dc4d31aec1cb1e8b4bcf63f402d295046b422b5",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    "rebuilt_files": {
+      "added_tokens.json": "1ebb6a1282432f254a88fdfa8074012f8c801318c471b855bfbd59f1fece5a62",
+      "chat_template.jinja": "87a2728cb8dc9fe424d624542f6060ec05a1d285ebbec578bb078900e33396b5",
+      "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "special_tokens_map.json": "9d4e3adcf5b4894fc41be719499ebd5eef3ecbf34e8a2ef1ddd123d7f76ffeab",
+      "tokenizer.json": "3d3ae9ad943aac66dead1163b94cfd57a77e4e80541a91e21e41496069518ab9",
+      "tokenizer_config.json": "1c8c415819fb5f750d59273b4d6a50d2c8315ec93f95654b1420cba83a7daa98",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  },
+  "E1": {
+    "repo": "SIKU-BERT/sikuroberta",
+    "revision": "bb25260d5c321924fe4fb353c09191c0aaf5c5c6",
+    "upstream_license_label": "apache-2.0",
+    "upstream_files": {
+      "config.json": "9f984556bb3906fa6b9ea9845f72ecfc96c4e4e83e4441cc206c7b59a03f31d1",
+      "vocab.txt": "51d3161cc29db6b5d2e841da562b9f8b59c050e44bcab2319c3eafa71c62522e"
+    },
+    "rebuilt_files": {
+      "added_tokens.json": "edb9900d9d34c2cb74e076b3122cfebb68bd6068b09bbea306124b9db1bfc474",
+      "special_tokens_map.json": "a3e1eb1082467a5e35413bbc97a205ab8f01130cf83764b9f25e614d6eb0fb97",
+      "tokenizer.json": "2614c7953113b84a19e015f3508c3fe5748a37e8a783b2a1b04d3737ce5f436c",
+      "tokenizer_config.json": "e9ab2a5639cb480762ef9a30e905010beb770b479aa874c88186590d3c1547d9",
+      "vocab.txt": "51d3161cc29db6b5d2e841da562b9f8b59c050e44bcab2319c3eafa71c62522e"
+    }
+  },
+  "E2": {
+    "repo": "ethanyt/guwenbert-base",
+    "revision": "eff0d4a5196d7bf7b8be746c5c6437e89d8b9061",
+    "upstream_license_label": "apache-2.0",
+    "upstream_files": {
+      "config.json": "c77dd1012bc22fea2d6d422359499c2ef095ae412300ef5d726e96b0a622904c",
+      "vocab.txt": "85a650161233174f26cf26b5bac3248748def50d65956b94bf305618755cb660"
+    },
+    "rebuilt_files": {
+      "added_tokens.json": "d5efd57a0751421b56497b3c64a2bd952d739672fad6421ecc5346775e2333ac",
+      "special_tokens_map.json": "a3e1eb1082467a5e35413bbc97a205ab8f01130cf83764b9f25e614d6eb0fb97",
+      "tokenizer.json": "6f8fc3aaaea39ecb51b7f0f8018d9b817e80b64c81c3eee4975b9624d615ca3b",
+      "tokenizer_config.json": "a6bde6ed9b2234c7656c1db985fd4bd51ba76e247d76df017fcd3ec697193d98",
+      "vocab.txt": "85a650161233174f26cf26b5bac3248748def50d65956b94bf305618755cb660"
+    }
+  },
+  "ED1": {
+    "repo": "IDEA-CCNL/Randeng-T5-77M",
+    "revision": "31ab711e7a339442d7c203437272f5bbfd20d7f3",
+    "upstream_license_label": "apache-2.0",
+    "upstream_files": {
+      "config.json": "f96348ccc5ce5a6adf107257e161076e21e01bb8f0100d76a7c1d0a163c1791a",
+      "special_tokens_map.json": "09059cedc26bc46bc09a52f05b92d4922e11917e87f3b92059bb1a63a59ab2c4",
+      "spiece.model": "c65feffa65ff0378759778193852083d23349cb1b40c906e9463a12f8076ff32",
+      "tokenizer.json": "2027ee399ff5b7d74c55a90dffa74e91e27ea6c9b06e9a9a150f0f7e221bcab3",
+      "tokenizer_config.json": "3355cdadb6f62959bbe5d8d5c17023df6e12512911ae561c7eb8394a14cf354a"
+    },
+    "rebuilt_files": {
+      "added_tokens.json": "e0a4ad02a86a39f5d3a9d01a777d00d17d04f9f811e35436865c322b4d828ae1",
+      "special_tokens_map.json": "8961c37b724e63e5b5d0f71810cd36944082d8568d9025cbf2ba5b23482323de",
+      "spiece.model": "c65feffa65ff0378759778193852083d23349cb1b40c906e9463a12f8076ff32",
+      "tokenizer.json": "b2e26edfad4c5d408eee5a0feb45ded92c90a60ca58bac876c74f64812d053fa",
+      "tokenizer_config.json": "67b4491fb29e34a4026c68e67d014575fd353e36e537ee0d710ff7b0dbc2ecf9"
+    }
+  },
+  "ED2": {
+    "repo": "Langboat/mengzi-t5-base",
+    "revision": "6616a21ba6f42867e2c14ef4c84ef44e22af3248",
+    "upstream_license_label": "apache-2.0",
+    "upstream_files": {
+      "config.json": "dca513b27692b67beec47cff0296e34207d44a1272c8279d0854af30416874d3",
+      "spiece.model": "e0dc796e4a3d83ccbeb33b35ce905c5821b427f19343e1bdad7d0b47a3317cac"
+    },
+    "rebuilt_files": {
+      "added_tokens.json": "f969a2cfcbad067b565aa7ff507efb3b2e155cdb20ba7fb467c0fddf5c8fd767",
+      "special_tokens_map.json": "8961c37b724e63e5b5d0f71810cd36944082d8568d9025cbf2ba5b23482323de",
+      "spiece.model": "e0dc796e4a3d83ccbeb33b35ce905c5821b427f19343e1bdad7d0b47a3317cac",
+      "tokenizer.json": "2a5571782b25fd321e125027980b4857b9d6fde9eb57264c59b598c2cdd8d382",
+      "tokenizer_config.json": "6919396c419daeb4f1996b7d4c30fff44bbbaf460fa87ad7e7db59a3bc49d6d3"
+    }
+  },
+  "ED3": {
+    "repo": "OpenMOSS-Team/bart-base-chinese",
+    "revision": "ffbee86596e8b14cfb1ef20d4cafa2ea30d272f8",
+    "upstream_license_label": null,
+    "upstream_files": {
+      "config.json": "40be620d7a622af1999aa2b23da8ddfbd8a4cb82865d5decc2699cb83cdcd6df",
+      "special_tokens_map.json": "a41a4fdf41343f47ec49414447390b841b39abe4b5f419ba334b5c08a0821102",
+      "tokenizer_config.json": "bd34c7a99dd0318395d91474148037981fb8fb65ebdc734446fa6e481dd075ca",
+      "vocab.txt": "be104bee30f8e896b6a0df090e2f5c3b55b12f2ca7a4ff45b9e2924ee4399150"
+    },
+    "rebuilt_files": {
+      "added_tokens.json": "d0316fec3718ca769402b53299d104d5b89b2decfe45ede113f171b022319fce",
+      "special_tokens_map.json": "9a3c1c01765d6f9941c55eda772c6f0f8d1431584f0abfe99d6b6b51eeaeaa86",
+      "tokenizer.json": "5b388d548a42c9c10387f37763072ad1edf43c81bd050109d20cb8bed4e85b07",
+      "tokenizer_config.json": "ed9171b36334be53b7a1e850b0d0a29b41dc933e343f47563b1584fa280c882c",
+      "vocab.txt": "be104bee30f8e896b6a0df090e2f5c3b55b12f2ca7a4ff45b9e2924ee4399150"
+    }
+  }
+}

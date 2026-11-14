@@ -1,4 +1,5 @@
 {
   "training_source_sha256": "ca46c32a0674a5f182f1ac7518f92a37b4bbc05b456608bde735f9fbaf4b4958",
-  "current_source_sha256": "9aaaf8586dc14d98cc9209c02f3e6b86d97743f234507c990f7bf01f928bd769"
+  "current_source_sha256": "c59d7497cf7f0afc1287e556e40c227fe648915e14513fd9013c0f499feca5c1",
+  "prior_release_source_sha256": "9aaaf8586dc14d98cc9209c02f3e6b86d97743f234507c990f7bf01f928bd769"
 }

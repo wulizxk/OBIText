@@ -6,7 +6,7 @@ recover full-vocabulary logits or to choose a checkpoint using Test results.
 import math
 from pathlib import Path
 from benchmark_protocol_v140 import (
-    FORMAL_TEST_SUITES, SUITE_QUESTION_COUNTS, benchmark_path, compatible_source,
+    FORMAL_TEST_SUITES, SUITE_QUESTION_COUNTS, benchmark_path, compatible_source, data_manifest,
     validate_formal_suite_metric,
 )
 
@@ -48,9 +48,7 @@ def validate_report_header(report):
 def load_test_contract(data):
     """Verify relevant frozen bytes directly, not declarations from a metrics file."""
     data = Path(data)
-    if sha(data / 'DATA_SHA256SUMS.json') != DATA_MANIFEST_SHA256:
-        raise ValueError('Test acceptance data manifest differs from frozen v1.5.0')
-    manifest = read(data / 'DATA_SHA256SUMS.json')
+    manifest, _ = data_manifest(data)
     if sha(data / 'target_vocab.json') != manifest['files']['target_vocab.json']:
         raise ValueError('Frozen target vocabulary checksum mismatch')
     targets = read(data / 'target_vocab.json')['tokens']

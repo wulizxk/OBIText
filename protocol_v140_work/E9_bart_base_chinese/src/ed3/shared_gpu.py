@@ -31,7 +31,8 @@ def load_policy():
     for key in fields - {'gpu_uuid', 'boot_id', 'peer_project', 'peer_code_sha256'}:
         if type(value[key]) is not int or value[key] < 0:
             raise ValueError('Invalid shared GPU policy integer: ' + key)
-    if (value['peer_project'] != '/home/zxk/oraccle-0905/E8_mengzi_t5_base'
+    peer_project = str(Path(__file__).resolve().parents[3] / 'E8_mengzi_t5_base')
+    if (value['peer_project'] != peer_project
             or not 1 <= value['max_peer_jobs'] <= 2
             or not 1024 <= value['allocator_limit_mib'] <= 8192
             or value['context_margin_mib'] < 1024 or value['free_margin_mib'] < 2048
